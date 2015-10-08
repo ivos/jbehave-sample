@@ -1,5 +1,3 @@
-Meta:
-
 Narrative:
 As a developer
 I want to see how JBehave works

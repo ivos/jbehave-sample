@@ -1,15 +1,21 @@
 package com.github.ivos.jbehave;
 
+import org.jbehave.core.annotations.BeforeStory;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Named;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+import org.jbehave.core.steps.Steps;
 import org.junit.Assert;
-import org.junit.Test;
 
-public class SampleSteps {
+public class SampleSteps extends Steps {
 
-	Sample sample = new Sample();
+	Sample sample;
+
+	@BeforeStory
+	public void setup() {
+		sample = new Sample();
+	}
 
 	@Given("that there is number $number")
 	public void givenNumber(@Named("number") int number) {

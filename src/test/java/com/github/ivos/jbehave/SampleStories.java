@@ -8,7 +8,6 @@ import org.jbehave.core.io.StoryFinder;
 import org.jbehave.core.junit.JUnitStories;
 import org.jbehave.core.reporters.Format;
 import org.jbehave.core.reporters.StoryReporterBuilder;
-import org.jbehave.core.steps.CandidateSteps;
 import org.jbehave.core.steps.InjectableStepsFactory;
 import org.jbehave.core.steps.InstanceStepsFactory;
 
@@ -21,7 +20,7 @@ public class SampleStories extends JUnitStories {
 		return new MostUsefulConfiguration().useStoryLoader(
 				new LoadFromClasspath(this.getClass()))
 				.useStoryReporterBuilder(new StoryReporterBuilder()
-						.withCodeLocation(CodeLocations.codeLocationFromClass(this.getClass()))
+						.withCodeLocation(CodeLocations.codeLocationFromClass(getClass()))
 						.withFormats(Format.HTML));
 	}
 
