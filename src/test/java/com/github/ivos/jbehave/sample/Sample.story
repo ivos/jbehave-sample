@@ -4,11 +4,13 @@ I want to see how JBehave works
 So that I can make informed decision whether to use it on a project
 
 Scenario: Sample test
-Given that there is number 5
-When I add number 3
+Given a number 5
+When I add 3
 Then result should be 8
 
 Scenario: Second sample test
-Given that there is number 15
-When I add number 18
-Then result should be 33
+Given a number 15
+When I add 12
+And I add 6
+And I add 9
+Then result should be 42
